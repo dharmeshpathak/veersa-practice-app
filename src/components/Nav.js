@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import { Link } from 'react-router-dom'
 function Nav() {
   return (
     // eslint-disable-next-line react/jsx-no-comment-textnodes
@@ -9,10 +10,11 @@ function Nav() {
         style={{ height: "50px" }}
         alt="todo-logo"
       />
-      <ul className="nav-items">
-        <li>Add Note</li>
-        <li>My Notes</li>
-      </ul>
+      <div className="nav-items">
+        
+        <Link to="/veersa-practice-app">Add Notes</Link>
+        <Link to="/veersa-practice-app/notes">Notes</Link>
+      </div>
     </div>
   );
 }

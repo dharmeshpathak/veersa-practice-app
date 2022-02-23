@@ -5,6 +5,7 @@ function Note({addNotes}) {
   const [todo, setTodo] = useState("");
   return (
     <div className="addNote">
+     <h1>ADD NOTE HERE </h1>
       <input
         name="note"
         placeholder="Enter note"

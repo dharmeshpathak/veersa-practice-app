@@ -23,13 +23,9 @@ function App() {
     <div className="home">
     
     <Nav/>
-      <h1>ADD NOTE HERE </h1>
+     
 
-      {/* <Note addNotes={addNotes} />
-      <section>
-       {notes.map((todo,index)=><p key= {`${index}`}>{todo}</p>)
-       }
-      </section> */}
+      
       <section>
       
     <Routes>
