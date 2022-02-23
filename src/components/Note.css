@@ -1,0 +1,16 @@
+.addNote {
+  max-width: 1200px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputField{
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+.addButton{
+padding: 5px;
+}
+
