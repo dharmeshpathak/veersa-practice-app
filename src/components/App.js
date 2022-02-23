@@ -1,8 +1,14 @@
 // import { Container, Typography } from '@mui/material';
 import "./App.css";
 import Note from "./Note";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import {useState} from 'react';
 import Nav from "./Nav";
+import Notes from "./Notes";
 function App() {
   const [notes, setNotes] = useState(["here is the first note"]);
   const addNotes = (note)=>{
@@ -13,16 +19,28 @@ function App() {
     })}
   }
   return (
+    <BrowserRouter>
     <div className="home">
+    
     <Nav/>
       <h1>ADD NOTE HERE </h1>
 
-      <Note addNotes={addNotes} />
+      {/* <Note addNotes={addNotes} />
       <section>
        {notes.map((todo,index)=><p key= {`${index}`}>{todo}</p>)
        }
+      </section> */}
+      <section>
+      
+    <Routes>
+      
+      <Route path="/veersa-practice-app" element={<Note addNotes={addNotes}/>} />
+      <Route path="/veersa-practice-app/notes" element={<Notes notes={notes} />} />
+    </Routes>
+  
       </section>
     </div>
+    </BrowserRouter>
   );
 }
 
