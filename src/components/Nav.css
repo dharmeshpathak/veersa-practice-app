@@ -1,15 +1,21 @@
-.nav {
+
+.nav{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #eaeaea;
+  justify-content: space-around;
+  margin-top: 10px;
 }
-.nav-items {
-  list-style: none;
+.logo{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-.nav-items > li {
-  padding: 7px;
+.nav-items{
+display: flexbox;
+justify-content: space-around;
+text-decoration: none;
+}
+.nav-items a{
+  text-decoration:none ;
+  padding: 5px;
 }

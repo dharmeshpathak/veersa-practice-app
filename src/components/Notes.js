@@ -1,12 +1,16 @@
 import React from 'react'
+import NoteCard from './NoteCard'
+import "./Notes.css"
 
-function Notes({notes}) {
+function Notes({notes ,deleteNote }) {
+  
+  
   return (
-    <div>
-    <ul>
-        {notes.map((todo,index)=><li key= {`${index}`}>{todo}</li>)
-       }
-       </ul>
+    <div className='notes'>
+    
+
+      { notes.map((todo,index)=><NoteCard todo={todo} key = {index} id={index} deleteNote = {deleteNote}/>)}
+       
     </div>
   )
 }

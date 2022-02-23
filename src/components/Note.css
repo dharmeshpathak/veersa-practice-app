@@ -1,9 +1,9 @@
 .addNote {
-  max-width: 1200px;
-  margin: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  
 }
 .inputField{
     padding: 5px;
