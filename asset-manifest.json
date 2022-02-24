@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/veersa-practice-app/static/css/main.c582c48a.css",
-    "main.js": "/veersa-practice-app/static/js/main.d177d53e.js",
+    "main.css": "/veersa-practice-app/static/css/main.506c2e34.css",
+    "main.js": "/veersa-practice-app/static/js/main.ef073140.js",
     "static/js/787.59520b8b.chunk.js": "/veersa-practice-app/static/js/787.59520b8b.chunk.js",
     "index.html": "/veersa-practice-app/index.html",
-    "main.c582c48a.css.map": "/veersa-practice-app/static/css/main.c582c48a.css.map",
-    "main.d177d53e.js.map": "/veersa-practice-app/static/js/main.d177d53e.js.map",
+    "main.506c2e34.css.map": "/veersa-practice-app/static/css/main.506c2e34.css.map",
+    "main.ef073140.js.map": "/veersa-practice-app/static/js/main.ef073140.js.map",
     "787.59520b8b.chunk.js.map": "/veersa-practice-app/static/js/787.59520b8b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c582c48a.css",
-    "static/js/main.d177d53e.js"
+    "static/css/main.506c2e34.css",
+    "static/js/main.ef073140.js"
   ]
 }
