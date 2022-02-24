@@ -1,21 +1,29 @@
 import React from "react";
-import "./Note.css";
+// import "./Note.css";
 import { useState } from "react";
-function Note({addNotes}) {
-  
-  const [title,setTitle] = useState("");
-  const [text,setText] = useState("");
-
+import { Paper, Typography, Box, Button } from "@mui/material";
+function Note({ addNotes }) {
+  const [title, setTitle] = useState("");
+  const [text, setText] = useState("");
 
   return (
-    <div className="addNote">
-     <h1>ADD NOTE HERE </h1>
+    <Box
+      elevation={1}
+      component={Paper}
+      p={4}
+      display="flex"
+      flexDirection={"column"}
+      alignItems={"center"}
+    >
+      <Typography variant="h3" component="h2" fontWeight={700} m={3}>
+        ADD NOTES HERE
+      </Typography>
       <input
         name="title"
         placeholder="Enter note"
         value={title}
         className="inputField"
-        onChange={(e)=>setTitle(e.target.value)}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <input
         name="text"
@@ -24,8 +32,19 @@ function Note({addNotes}) {
         className="inputField"
         onChange={(e) => setText(e.target.value)}
       />
-      <button className="addButton" onClick={()=>{addNotes(title,text);setText("");setTitle("")}} >ADD NOTE</button>
-    </div>
+      
+      
+      <Button
+        variant="outlined"
+        onClick={() => {
+          addNotes(title, text);
+          setText("");
+          setTitle("");
+        }}
+      >
+        ADD NOTE
+      </Button>
+    </Box>
   );
 }
 

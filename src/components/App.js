@@ -6,6 +6,7 @@ import { useState } from "react";
 import Nav from "./Nav";
 import Notes from "./Notes";
 import EditNote from "./EditNote";
+import { Box } from "@mui/material";
 function App() {
   const [notes, setNotes] = useState([{title:"firsttTTLE",text:"firsttext"},{title:"secondttitle",text:"secondtext"}]);
   const addNotes = (title, text) => {
@@ -57,7 +58,7 @@ function App() {
       <div className="home">
         <Nav />
 
-        <section>
+        <Box display={"flex"} justifyContent={"center"} mt={4}>
           <Routes>
             <Route
               path="/veersa-practice-app"
@@ -72,7 +73,7 @@ function App() {
               element={<EditNote notes={notes} editNote={editNote}/>}
             />
           </Routes>
-        </section>
+        </Box>
       </div>
     </BrowserRouter>
   );
