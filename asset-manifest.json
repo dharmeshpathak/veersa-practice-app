@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/veersa-practice-app/static/css/main.0e3ceb4c.css",
-    "main.js": "/veersa-practice-app/static/js/main.c9128809.js",
+    "main.css": "/veersa-practice-app/static/css/main.c3d42932.css",
+    "main.js": "/veersa-practice-app/static/js/main.59003414.js",
     "static/js/787.59520b8b.chunk.js": "/veersa-practice-app/static/js/787.59520b8b.chunk.js",
     "index.html": "/veersa-practice-app/index.html",
-    "main.0e3ceb4c.css.map": "/veersa-practice-app/static/css/main.0e3ceb4c.css.map",
-    "main.c9128809.js.map": "/veersa-practice-app/static/js/main.c9128809.js.map",
+    "main.c3d42932.css.map": "/veersa-practice-app/static/css/main.c3d42932.css.map",
+    "main.59003414.js.map": "/veersa-practice-app/static/js/main.59003414.js.map",
     "787.59520b8b.chunk.js.map": "/veersa-practice-app/static/js/787.59520b8b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e3ceb4c.css",
-    "static/js/main.c9128809.js"
+    "static/css/main.c3d42932.css",
+    "static/js/main.59003414.js"
   ]
 }
