@@ -5,12 +5,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Nav from "./Nav";
 import Notes from "./Notes";
+import EditNote from "./EditNote";
 function App() {
   const [notes, setNotes] = useState([{title:"firsttTTLE",text:"firsttext"},{title:"secondttitle",text:"secondtext"}]);
   const addNotes = (title, text) => {
-    setNotes((prev) => {
-      return [...prev, { title: title, text: text }];
-    });
+    const noteTitle = title.trim();
+    const noteText = text.trim();
+    if(noteText!=="" && noteTitle !== ""){
+      setNotes((prev) => {
+        return [...prev, { title: noteTitle, text: noteText }];
+      });
+
+    }
+    
   };
   const deleteNote =(id)=>{
     console.log("element deleted")
@@ -22,6 +29,27 @@ function App() {
     })
   }
   
+  const editNote = (id,title,text)=>{
+    console.log("edited");
+    
+    console.log(id);
+    console.log(title);
+    console.log(text);
+   const newList  = notes.map((todo,index)=>{
+     if(+id===index){
+      console.log(id);
+      console.log( index);
+       todo.title = title;
+       todo.text = text;
+
+     }
+     return todo;
+   })
+  
+   console.log(newList)
+
+
+  }
 
   
   return (
@@ -37,7 +65,11 @@ function App() {
             />
             <Route
               path="/veersa-practice-app/notes"
-              element={<Notes notes={notes} deleteNote={deleteNote}/>}
+              element={<Notes notes={notes} deleteNote={deleteNote} />}
+            />
+            <Route
+              path="/veersa-practice-app/update/:id"
+              element={<EditNote notes={notes} editNote={editNote}/>}
             />
           </Routes>
         </section>

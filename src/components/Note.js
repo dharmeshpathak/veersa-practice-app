@@ -15,16 +15,16 @@ function Note({addNotes}) {
         placeholder="Enter note"
         value={title}
         className="inputField"
-        onChange={(e)=>setTitle(e.target.value.trim())}
+        onChange={(e)=>setTitle(e.target.value)}
       />
       <input
         name="text"
         placeholder="Enter Details"
         value={text}
         className="inputField"
-        onChange={(e) => setText(e.target.value.trim())}
+        onChange={(e) => setText(e.target.value)}
       />
-      <button className="addButton" onClick={()=>addNotes(title,text)} >ADD NOTE</button>
+      <button className="addButton" onClick={()=>{addNotes(title,text);setText("");setTitle("")}} >ADD NOTE</button>
     </div>
   );
 }
