@@ -15,7 +15,7 @@ function Note({ addNotes }) {
       flexDirection={"column"}
       alignItems={"center"}
     >
-      <Typography variant="h3" component="h2" fontWeight={700} m={3}>
+      <Typography variant="h3" component="h4" fontWeight={700} m={3} textAlign = {"center"} color = {"blue"}>
         ADD NOTES HERE
       </Typography>
       <input

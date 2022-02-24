@@ -4,7 +4,7 @@ import {Card} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 function NoteCard({todo, deleteNote,id}) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' ,margin:"10px"}}>
   <Card.Body>
     <Card.Title>{todo.title}</Card.Title>
     
