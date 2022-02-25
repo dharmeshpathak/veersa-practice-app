@@ -20,7 +20,9 @@ const reducer = (state = initialState, action) => {
       console.log(action.payload);
       return {
         ...state,
-        notes: [...action.payload],
+        notes: state.notes.filter((note,index)=>{
+            return action.payload.id !==index
+        }),
       };
     }
     case "EDIT_TASK": {

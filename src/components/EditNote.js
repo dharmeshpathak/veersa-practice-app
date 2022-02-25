@@ -7,12 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 function EditNote() {
   const { id } = useParams();
   const note = useSelector((state) => state.notes[id]);
-  console.log("note = ", note);
+  // console.log("note = ", note);
   const [title, setTitle] = useState(note.title);
   const [text, setText] = useState(note.text);
 
   const dispatch = useDispatch();
-  console.log(id, title, text);
+  // console.log(id, title, text);
 
   return (
     <Box
