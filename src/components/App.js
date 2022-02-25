@@ -33,13 +33,9 @@ function App() {
   const editNote = (id,title,text)=>{
     console.log("edited");
     
-    // console.log(id);
-    // console.log(title);
-    // console.log(text);
    const newList  = notes.map((todo,index)=>{
      if(+id===index){
-      // console.log(id);
-      // console.log( index);
+      
        todo.title = title.trim();
        todo.text = text.trim();
 
