@@ -1,10 +1,12 @@
 import React from "react";
-// import "./Note.css";
+
 import { useState } from "react";
 import { Paper, Typography, Box, Button } from "@mui/material";
-function Note({ addNotes }) {
+import { useDispatch } from "react-redux";
+function Note() {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
 
   return (
     <Box
@@ -33,11 +35,11 @@ function Note({ addNotes }) {
         onChange={(e) => setText(e.target.value)}
       />
       
-      
+    
       <Button
         variant="outlined"
         onClick={() => {
-          addNotes(title, text);
+          dispatch({type:"ADD_TASK",payload:{title:title.trim(),text:text.trim()}})
           setText("");
           setTitle("");
         }}

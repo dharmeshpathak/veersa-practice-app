@@ -4,7 +4,7 @@ import "./Notes.css"
 import { Box, Typography } from '@mui/material';
 import {  useSelector } from 'react-redux';
 
-function Notes({deleteNote ,editNote}) {
+function Notes({editNote}) {
   const todos = useSelector(state=>state.notes)
   
   console.log("todos=",todos)
@@ -15,7 +15,7 @@ function Notes({deleteNote ,editNote}) {
       </Typography>
     
 <Box display="flex" flexDirection="row" justifyContent={"center"}   flexWrap={"wrap"}>
-      { todos.map((todo,index)=><NoteCard todo={todo} key = {index} id={index} deleteNote = {deleteNote} editNote={editNote}/>)}
+      { todos.map((todo,index)=><NoteCard todo={todo} key = {index} id={index}  editNote={editNote}/>)}
       </Box>
       
        
