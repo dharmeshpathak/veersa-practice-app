@@ -2,53 +2,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Note from "./Note";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Nav from "./Nav";
 import Notes from "./Notes";
 import EditNote from "./EditNote";
 import { Box } from "@mui/material";
 function App() {
-  const [notes, setNotes] = useState([{title:"firsttTTLE",text:"firsttext"},{title:"secondttitle",text:"secondtext"}]);
-  const addNotes = (title, text) => {
-    const noteTitle = title.trim();
-    const noteText = text.trim();
-    if(noteText!=="" && noteTitle !== ""){
-      setNotes((prev) => {
-        return [...prev, { title: noteTitle, text: noteText }];
-      });
-
-    }
-    
-  };
-  const deleteNote =(id)=>{
-    console.log("element deleted")
-    console.log("id= ",id)
-    setNotes(prevNotes=>{
-      return prevNotes.filter((todo,index)=>{
-        return id!==index;
-      })
-    })
-  }
-  
-  const editNote = (id,title,text)=>{
-    console.log("edited");
-    
-   const newList  = notes.map((todo,index)=>{
-     if(+id===index){
-      
-       todo.title = title.trim();
-       todo.text = text.trim();
-
-     }
-     return todo;
-   })
-  
-   console.log(newList)
-
-
-  }
-
-  
   return (
     <BrowserRouter>
       <div className="home">
@@ -56,17 +14,11 @@ function App() {
 
         <Box display={"flex"} justifyContent={"center"} mt={4}>
           <Routes>
-            <Route
-              path="/veersa-practice-app"
-              element={<Note addNotes={addNotes} />}
-            />
-            <Route
-              path="/veersa-practice-app/notes"
-              element={<Notes notes={notes} deleteNote={deleteNote} />}
-            />
+            <Route path="/veersa-practice-app" element={<Note />} />
+            <Route path="/veersa-practice-app/notes" element={<Notes />} />
             <Route
               path="/veersa-practice-app/update/:id"
-              element={<EditNote notes={notes} editNote={editNote}/>}
+              element={<EditNote />}
             />
           </Routes>
         </Box>

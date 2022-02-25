@@ -17,7 +17,14 @@ function Note() {
       flexDirection={"column"}
       alignItems={"center"}
     >
-      <Typography variant="h3" component="h4" fontWeight={700} m={3} textAlign = {"center"} color = {"blue"}>
+      <Typography
+        variant="h3"
+        component="h4"
+        fontWeight={700}
+        m={3}
+        textAlign={"center"}
+        color={"blue"}
+      >
         ADD NOTES HERE
       </Typography>
       <input
@@ -34,12 +41,14 @@ function Note() {
         className="inputField"
         onChange={(e) => setText(e.target.value)}
       />
-      
-    
+
       <Button
         variant="outlined"
         onClick={() => {
-          dispatch({type:"ADD_TASK",payload:{title:title.trim(),text:text.trim()}})
+          dispatch({
+            type: "ADD_TASK",
+            payload: { title: title.trim(), text: text.trim() },
+          });
           setText("");
           setTitle("");
         }}

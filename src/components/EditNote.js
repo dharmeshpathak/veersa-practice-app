@@ -1,16 +1,18 @@
 import React from "react";
 import { Paper, Typography, Box, Button } from "@mui/material";
-import "./Note.css"
+import "./Note.css";
 import { useState } from "react";
-import {useParams} from 'react-router-dom'
-function EditNote({notes,editNote}) {
-const { id } = useParams();
-  const [title,setTitle] = useState(notes[id].title);
-  const [text,setText] = useState(notes[id].text);
-  
-  
-console.log(id,title,text);
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+function EditNote() {
+  const { id } = useParams();
+  const note = useSelector((state) => state.notes[id]);
+  console.log("note = ", note);
+  const [title, setTitle] = useState(note.title);
+  const [text, setText] = useState(note.text);
 
+  const dispatch = useDispatch();
+  console.log(id, title, text);
 
   return (
     <Box
@@ -29,8 +31,7 @@ console.log(id,title,text);
         placeholder="Enter note"
         value={title}
         className="inputField"
-        onChange={(e)=>setTitle(e.target.value)}
-        
+        onChange={(e) => setTitle(e.target.value)}
       />
       <input
         name="text"
@@ -39,8 +40,17 @@ console.log(id,title,text);
         className="inputField"
         onChange={(e) => setText(e.target.value)}
       />
-     <Button
-        variant="outlined" onClick={()=>{editNote(id,title,text);}} >Update NOTE</Button>
+      <Button
+        variant="outlined"
+        onClick={() => {
+          dispatch({
+            type: "EDIT_TASK",
+            payload: { id: id, title: title, text: text },
+          });
+        }}
+      >
+        Update NOTE
+      </Button>
     </Box>
   );
 }
